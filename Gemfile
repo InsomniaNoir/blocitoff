@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Gems added for Application
 gem 'devise'
 gem 'figaro'
+gem 'pry', '~> 0.10.1'
 
 # Development Test Gems
 group :development, :test do
