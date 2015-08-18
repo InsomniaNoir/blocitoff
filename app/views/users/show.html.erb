@@ -1,0 +1,19 @@
+<div class="page-header" id="user-show"><h1><%= @user.name %>'s Profile
+  <small>What do you need to do today?</small>
+  </h1>
+</div>
+
+<div id="container">
+  <div class="jumbotron" id="jumbo">
+      <h1>Your Details</h1>
+      <%= if current_user? %>
+      <% @user.each do |f| %>
+      <ul>
+          <li><%= f.name %></li>
+          <li><%= f.email %></li>
+          <li><%= </li>
+       <% end %>
+      </ul>
+      <% end %>
+  </div>
+</div>
