@@ -5,14 +5,12 @@
 
 <div id="container">
   <div class="jumbotron" id="jumbo">
+    <div id="jumbo-content">
       <h1>Your Details</h1>
-      <%= if current_user? %>
-      <% @user.each do |f| %>
       <ul>
-          <li><%= f.name %></li>
-          <li><%= f.email %></li>
-       <% end %>
+        <li><%= @user.name %></li>
+        <li><%= @user.email %></li>
       </ul>
-      <% end %>
+    </div>
   </div>
 </div>

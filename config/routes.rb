@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   #   put :toggle #task_complete_path(@task)
   # end
 
+  resources :users
+
   get "welcome/index"
   get "welcome/about"
 
