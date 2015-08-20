@@ -41,13 +41,17 @@ group :development, :test do
   # Better Errors
   gem "better_errors"
   gem "binding_of_caller"
+  # Thin server
+  gem 'thin'
 end
 
 
 group :production do
-  #PostgreSQL for Heroku
+  # PostgreSQL for Heroku
   gem 'pg'
   gem 'rails_12factor'
+  # Puma server
+  gem 'puma'
 end
 
 # Use ActiveModel has_secure_password
