@@ -1,0 +1,18 @@
+<%= form_for [@task] do %>
+  <% if @task.errors.any %>
+    <div class="alert alert-danger">
+      <h4>There are <%= pluralize(@task.errors.count, "error") %>.</h4>
+        <ul>
+          <% @task.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+  <%= form_group_tag(@task.errors[:description]) do %>
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control', placeholder: 'Enter Description' %>
+    <% end %>
+  <%= form_group_tag(@task.errors[:completed]) do %>
+    <%= f.label :completed %>
+    <%= f.check_box %>
