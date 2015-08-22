@@ -1,27 +1,19 @@
-<%= form_for [@task] do %>
-  <% if @task.errors.any %>
+<%= form_for [current_user, task] do |f| %>
+  <% if task.errors.any? %>
     <div class="alert alert-danger">
-      <h4>There are <%= pluralize(@task.errors.count, "error") %>.</h4>
+      <h4>There are <%= pluralize(task.errors.count, "error") %>.</h4>
         <ul>
-          <% @task.errors.full_messages.each do |msg| %>
+          <% task.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
         </ul>
     </div>
   <% end %>
-  <%= form_group_tag(@task.errors[:description]) do %>
+  <%= form_group_tag(task.errors[:description]) do %>
     <%= f.label :description %>
     <%= f.text_field :description, class: 'form-control', placeholder: 'Enter Description' %>
     <% end %>
-  <%= form_group_tag(@task.errors[:completed]) do %>
-    <%= f.label :completed %>
-    <%= link_to "Complete", task_toggle_path(@task), method: :put %>
-    <%= @item.completed ? "Completed" : "Pending" %>
-    <% end %>
-  <%= form_group_tag(@task.errors[:expires_at]) %>
-    <%= f.label :expires_at %>
-    <%=  %>
-  <% end %>
   <div class="form-group">
     <%= f.submit 'Save', class: 'btn btn-custom' %>
   </div>
+<% end %>

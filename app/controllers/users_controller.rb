@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @tasks = @user.tasks
+    @tasks = current_user.tasks
   end
 end
