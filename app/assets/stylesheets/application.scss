@@ -27,10 +27,49 @@ h1 {
     color: #000000;
 }
 
+#landing {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#welcome-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .jumbotron {
   border: 0 10px 10px 0, #000000;
   background: #310C25;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
 
+#jumbo-content > h1{
+  color: #B8B8B8;
+  text-align: center;
+} li {
+  text-align: center;
+  color: #B1B1B1;
+}
+
+#task-desc {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#task-label {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 98px;
+}
+
+#submit-task {
+  margin-left: 98px;
 }
 
 #content {
@@ -38,6 +77,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 .btn-custom {
   background-color: hsl(278, 75%, 21%) !important;

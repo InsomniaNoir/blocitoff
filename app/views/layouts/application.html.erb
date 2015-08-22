@@ -6,21 +6,22 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<div class="container-fluid">
 <body>
-  <div class="col-md-2 col-md-offset-3"
-  <ul>
-    <li><%= link_to "Home", welcome_index_path %></li>
-    <li><%= link_to "About", welcome_about_path %></li>
-  </ul>
-</div>
-<div class="pull-right user-info">
-  <% if current_user %>
-    Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign In", new_user_session_path %> or
-    <%= link_to "Sign Up", new_user_registration_path %>
-  <% end %>
+<div class="container">
+  <div class="nav nav-tabs">
+    <ul style="list-style-type:none" class="pull-left">
+      <li><%= link_to "Home", welcome_index_path, class: 'btn btn-custom' %></li>
+      <li><%= link_to "About", welcome_about_path, class: 'btn btn-custom' %></li>
+    </ul>
+  <div class="pull-right user-info">
+    <% if current_user %>
+      Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path %> or
+      <%= link_to "Sign Up", new_user_registration_path %>
+    <% end %>
+   </div>
+  </div>
 </div>
 
 <% if flash[:notice] %>
