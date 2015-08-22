@@ -38,3 +38,20 @@ h1 {
   margin-left: auto;
   margin-right: auto;
 }
+
+.btn-custom {
+  background-color: hsl(278, 75%, 21%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a336e2", endColorstr="#400d5d");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#a336e2), to(#400d5d));
+  background-image: -moz-linear-gradient(top, #a336e2, #400d5d);
+  background-image: -ms-linear-gradient(top, #a336e2, #400d5d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a336e2), color-stop(100%, #400d5d));
+  background-image: -webkit-linear-gradient(top, #a336e2, #400d5d);
+  background-image: -o-linear-gradient(top, #a336e2, #400d5d);
+  background-image: linear-gradient(#a336e2, #400d5d);
+  border-color: #400d5d #400d5d hsl(278, 75%, 12.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.56);
+  -webkit-font-smoothing: antialiased;
+}
