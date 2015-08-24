@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'figaro'
 gem 'pry', '~> 0.10.1'
+gem 'whenever', :require => false
 
 # Development Test Gems
 group :development, :test do
