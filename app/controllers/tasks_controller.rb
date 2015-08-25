@@ -3,6 +3,7 @@ class TasksController < ApplicationController
   def toggle
     task = Task.find(params[:task_id])
     task.completed ? task.completed = false : task.completed = true
+    task.save
     redirect_to user_path(current_user)
   end
 

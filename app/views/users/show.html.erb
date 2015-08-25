@@ -13,7 +13,12 @@
         <li><%= current_user.email %></li>
       </ul>
       <%= render partial: 'tasks/form', locals: { task: Task.new } %>
-      <%= render partial: 'tasks/task', locals: { task: Task.new } %>
+      <div class="media">
+        <ol class="list-style-type: none">
+          <%= render partial: 'tasks/task', collection: @tasks %>
+        </ol>
+      </div>
+
     </div>
   </div>
 </div>

@@ -1,10 +1,8 @@
-<div class="media">
-  <ol style="list-style-type: none" class="media list">
-    <% @tasks.each do |task| %>
-    <li class="text-align: left">
-      <h2><%= task.description %></h2>
-      <small>Expires: <%= task.expires_at %></small>
-    </li>
-    <% end %>
-  </ol>
-</div>
+<li class="text-align: left">
+  <h2><%= task.description %></h2>
+  <p>
+    <%= task.completed ? "Completed" : "Pending" %>
+    <%= link_to "Toggle", user_task_toggle_path(current_user, task), method: :put, class: 'btn btn-success' %>
+  </p>
+  <small>Expires: <%= distance_of_time_in_words_to_now(task.expires_at) %></small>
+</li>
