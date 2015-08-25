@@ -1,7 +1,7 @@
 <div class="media">
   <ul style="list-style-type: none" class="media list">
     <% @tasks.each do |task| %>
-    <li>
+    <li class="text-align: left">
       <h2><%= task.description %></h2>
       <small>Expires: <%= task.expires_at %></small>
     </li>
